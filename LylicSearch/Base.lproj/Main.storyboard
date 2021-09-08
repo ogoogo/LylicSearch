@@ -47,18 +47,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="M1A-IF-Dwq"/>
                     <connections>
-                        <outlet property="tableView" destination="dzi-qY-z4g" id="6Pl-Ao-E3V"/>
-                        <segue destination="CHQ-3y-Pv6" kind="show" id="b2a-Kw-bmp"/>
+                        <outlet property="searchBar" destination="P29-O1-dQG" id="c67-bX-f2g"/>
+                        <outlet property="tableView" destination="dzi-qY-z4g" id="0R7-cL-ShR"/>
+                        <segue destination="CHQ-3y-Pv6" kind="show" identifier="toDetail" id="b2a-Kw-bmp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="79.6875"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="PwX-y3-b4g">
             <objects>
-                <viewController id="CHQ-3y-Pv6" sceneMemberID="viewController">
+                <viewController id="CHQ-3y-Pv6" customClass="DetailViewController" customModule="LylicSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K0G-7y-mIM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -17,6 +17,7 @@
 		CD0563B026E5F7440083DD25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0563AE26E5F7440083DD25 /* LaunchScreen.storyboard */; };
 		CD0563BB26E5F7440083DD25 /* LylicSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0563BA26E5F7440083DD25 /* LylicSearchTests.swift */; };
 		CD0563C626E5F7440083DD25 /* LylicSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0563C526E5F7440083DD25 /* LylicSearchUITests.swift */; };
+		CD0563D426E908FF0083DD25 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0563D326E908FF0083DD25 /* DetailViewController.swift */; };
 		D2ADA43D0C1E5B529C44F1A5 /* Pods_LylicSearch_LylicSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD72A0E925C8BC1247A40032 /* Pods_LylicSearch_LylicSearchUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		CD0563C126E5F7440083DD25 /* LylicSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LylicSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0563C526E5F7440083DD25 /* LylicSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LylicSearchUITests.swift; sourceTree = "<group>"; };
 		CD0563C726E5F7440083DD25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD0563D326E908FF0083DD25 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F9976E9A23B72DEE6FCD56C2 /* Pods-LylicSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LylicSearch.debug.xcconfig"; path = "Target Support Files/Pods-LylicSearch/Pods-LylicSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		FB99441DCCC0D8BEBB4806AC /* Pods-LylicSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LylicSearch.release.xcconfig"; path = "Target Support Files/Pods-LylicSearch/Pods-LylicSearch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +148,7 @@
 				CD0563AC26E5F7440083DD25 /* Assets.xcassets */,
 				CD0563AE26E5F7440083DD25 /* LaunchScreen.storyboard */,
 				CD0563B126E5F7440083DD25 /* Info.plist */,
+				CD0563D326E908FF0083DD25 /* DetailViewController.swift */,
 			);
 			path = LylicSearch;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				CD0563A826E5F7430083DD25 /* ViewController.swift in Sources */,
 				CD0563A426E5F7430083DD25 /* AppDelegate.swift in Sources */,
 				CD0563A626E5F7430083DD25 /* SceneDelegate.swift in Sources */,
+				CD0563D426E908FF0083DD25 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,7 +590,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = JNGQ362X2F;
 				INFOPLIST_FILE = LylicSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -606,7 +610,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = JNGQ362X2F;
 				INFOPLIST_FILE = LylicSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
