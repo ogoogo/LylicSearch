@@ -11,12 +11,26 @@ import SwiftyJSON
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet var nameLabel:UILabel!
+    @IBOutlet var birthLabel:UILabel!
+    @IBOutlet var homeLabel:UILabel!
+    @IBOutlet var heightLabel:UILabel!
+    @IBOutlet var massLabel:UILabel!
+    @IBOutlet var genderLabel:UILabel!
+    @IBOutlet var hairColorLabel:UILabel!
+    @IBOutlet var skinColorLabel:UILabel!
+    @IBOutlet var eyeColorLabel:UILabel!
+    
+    
     var url:String=""
-
+    var information:[String:String?] = [:]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      
+        self.overrideUserInterfaceStyle = .light
+        
+        
         
         AF.request(url,method: .get)
             .responseJSON{response in
@@ -25,10 +39,39 @@ class DetailViewController: UIViewController {
                     
                     
                     let json = JSON(element)
-                    print(json["name"].string ?? "エラー")
-        
-//                                                    print(json[
-                        
+                    
+                    self.nameLabel.text=json["name"].string ?? ""
+                    self.genderLabel.text=json["gender"].string ?? ""
+                    self.birthLabel.text=json["birth_year"].string ?? ""
+                    self.heightLabel.text=json["height"].string ?? ""
+                    self.massLabel.text=json["mass"].string ?? ""
+                    self.hairColorLabel.text=json["hair_color"].string ?? ""
+                    self.skinColorLabel.text=json["skin_color"].string ?? ""
+                    self.eyeColorLabel.text=json["eye_color"].string ?? ""
+                    
+                    let planetUrl=json["homeworld"].string ?? ""
+                    
+                    AF.request(planetUrl ,method: .get)
+                        .responseJSON{secondResponse in
+                            switch secondResponse.result{
+                            case .success(let secondElement):do{
+                                
+                                let secondJson=JSON(secondElement)
+                                
+                                self.homeLabel.text=secondJson["name"].string ?? ""
+                                
+                                
+                                
+                            }
+                            case .failure:do{
+                                print("エラー3")
+                            }
+                            }
+                        }
+                    
+                    
+                   
+                    
                     
                 }
                 case .failure:do{
@@ -36,20 +79,10 @@ class DetailViewController: UIViewController {
                 }
                 }
                 
-
-        // Do any additional setup after loading the view.
+                
+                // Do any additional setup after loading the view.
+            }
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
 }

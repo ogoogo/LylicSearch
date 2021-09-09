@@ -23,6 +23,8 @@ class ViewController: UIViewController, UITableViewDataSource,UISearchBarDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.overrideUserInterfaceStyle = .light
+        
         tableView.dataSource=self
         searchBar.delegate=self
         tableView.delegate=self
